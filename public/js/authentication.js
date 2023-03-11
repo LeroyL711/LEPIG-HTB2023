@@ -15,7 +15,7 @@ var uiConfig = {
         })
           .then(() => {
             // Create the applications sub-collection
-            newUserRef.collection("applications").doc();
+            newUserRef.collection("applications").doc().set({});
             console.log("New user added to firestore");
             window.location.assign("main.html");
           })
