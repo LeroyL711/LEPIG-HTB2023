@@ -1,4 +1,6 @@
-
+#container{
+  padding: 2% 20% 5% 20%;
+}
 #user-welcome {
   display: flex;
   align-items: center;
@@ -36,7 +38,6 @@
   display: block;
 }
 
-.accordion {
-  align-items: center;
+
+
   
-}

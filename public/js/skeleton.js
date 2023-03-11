@@ -7,26 +7,39 @@ function loadSkeleton() {
         if (user) {
             // User is signed in.
             // Do something for the user here.
-            console.log($('#navbarPlaceholder').load('./text/nav_after_login.html'));
-            console.log($('#footerPlaceholder').load('./text/footer.html'));
+            $('#afterlogin').load('/text/nav_after_login.html', function () {
+                console.log("After login navbar loaded successfully.");
+            });
         } else {
             // No user is signed in.
-            console.log($('#navbarPlaceholder').load('./text/nav_before_login.html'));
-            console.log($('#footerPlaceholder').load('./text/footer.html'));
+            $('#beforelogin').load('/text/nav_before_login.html', function () {
+                console.log("Before login navbar loaded successfully.");
+            });
         }
+        $('#footerPlaceholder').load('./text/footer.html', function (response, status, xhr) {
+            console.log('Loaded footer:', status);
+            if (status == 'error') {
+                console.log('Error loading footer:', xhr.status, xhr.statusText);
+            }
+        });
     });
-
-    loadSkeleton(); // Invoke the function
-
-    //------------------------------------------------
-    // Call this function when the "logout" button is clicked
-    //-------------------------------------------------
-    function logout() {
-        firebase.auth().signOut().then(() => {
-            // Sign-out successful.
-            console.log("logging out user");
-        }).catch((error) => {
-            // An error happened.
+    if ($('#beforelogin').length) {
+        $('#beforelogin').load('/text/nav_before_login.html', function () {
+            console.log("Before login navbar loaded successfully.");
         });
     }
+}
+loadSkeleton(); // Invoke the function
+
+//------------------------------------------------
+// Call this function when the "logout" button is clicked
+//-------------------------------------------------
+function logout() {
+    firebase.auth().signOut().then(() => {
+        // Sign-out successful.
+        console.log("logging out user");
+    }).catch((error) => {
+        // An error happened.
+    });
+}
 
