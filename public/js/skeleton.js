@@ -3,18 +3,24 @@
 // (navbar, footer, and other things) into html doc. 
 //---------------------------------------------------
 function loadSkeleton() {
-
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
             // Do something for the user here.
-            console.log($('#navbarPlaceholder').load('./text/nav_after_login.html'));
-            console.log($('#footerPlaceholder').load('./text/footer.html'));
+            $('#afterlogin').load('/text/nav_after_login.html', function() {
+                console.log("After login navbar loaded successfully.");
+            });
         } else {
             // No user is signed in.
-            console.log($('#navbarPlaceholder').load('./text/nav_before_login.html'));
-            console.log($('#footerPlaceholder').load('./text/footer.html'));
+            $('#beforelogin').load('/text/nav_before_login.html', function() {
+                console.log("Before login navbar loaded successfully.");
+            });
         }
     });
+    if ($('#beforelogin').length) {
+        $('#beforelogin').load('/nav_before_login.html', function() {
+            console.log("Before login navbar loaded successfully.");
+        });
+    }
 }
 loadSkeleton(); //invoke the function
