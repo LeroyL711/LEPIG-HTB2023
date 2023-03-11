@@ -18,12 +18,12 @@ function loadSkeleton() {
         }
     });
     if ($('#beforelogin').length) {
-        $('#beforelogin').load('/nav_before_login.html', function() {
+        $('#beforelogin').load('/text/nav_before_login.html', function() {
             console.log("Before login navbar loaded successfully.");
         });
     }
 }
-loadSkeleton(); //invoke the function
+loadSkeleton(); // Invoke the function
 
 //------------------------------------------------
 // Call this function when the "logout" button is clicked
