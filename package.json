@@ -11,5 +11,13 @@
   "version": "1.0.0",
   "main": "server.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeroyL711/LEPIG-HTB2023.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LeroyL711/LEPIG-HTB2023/issues"
+  },
+  "homepage": "https://github.com/LeroyL711/LEPIG-HTB2023#readme"
 }
