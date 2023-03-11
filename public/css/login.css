@@ -104,7 +104,7 @@ a {
 .login-form .group .input,
 .login-form .group .button {
 	width: 100%;
-	color: #fff;
+	color: grey;
 	/* color: black; */
 	display: block;
 }
@@ -200,4 +200,3 @@ a {
 .foot-lnk {
 	text-align: center;
 }
-
