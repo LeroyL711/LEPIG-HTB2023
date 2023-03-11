@@ -47,7 +47,7 @@ app.get('/nav_after_login.html', (req, res) => {
 });
 
 app.get('/footer.html', (req, res) => {
-  res.sendFile(__dirname + 'footer.html');
+  res.sendFile(__dirname + '/text/footer.html');
 });
 
 // For resource not found (i.e., 404)
