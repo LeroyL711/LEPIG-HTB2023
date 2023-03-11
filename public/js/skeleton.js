@@ -7,12 +7,12 @@ function loadSkeleton() {
         if (user) {
             // User is signed in.
             // Do something for the user here.
-            $('#afterlogin').load('/text/nav_after_login.html', function () {
+            $('#afterlogin').load('./text/nav_after_login.html', function () {
                 console.log("After login navbar loaded successfully.");
             });
         } else {
             // No user is signed in.
-            $('#beforelogin').load('/text/nav_before_login.html', function () {
+            $('#beforelogin').load('./text/nav_before_login.html', function () {
                 console.log("Before login navbar loaded successfully.");
             });
         }
