@@ -19,19 +19,19 @@ app.use("/img", express.static("./public/img"));
 
 //Call back function
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/app/html/index.html');
-  });
+  res.sendFile(__dirname + '/app/html/main.html');
+});
 
-  app.get('/index.html', (req, res) => {
-    res.sendFile(__dirname + '/app/html/index.html');
-  });
+app.get('/main.html', (req, res) => {
+  res.sendFile(__dirname + '/app/html/main.html');
+});
 
 // For resource not found (i.e., 404)
 app.use(function (req, res, next) {
-    res.status(404).send("<html><head><title>Page not found!</title></head><body><p>Nothing here.</p></body></html>");
+  res.status(404).send("<html><head><title>Page not found!</title></head><body><p>Nothing here.</p></body></html>");
 });
 
 // RUN SERVER
 app.listen(8000, () => {
-    console.log('Server started on port 8000');
-  });
+  console.log('Server started on port 8000');
+});
