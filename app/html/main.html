@@ -62,68 +62,155 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" id="application-1" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#application-info-1" aria-expanded="true" aria-controls="application-info-1">
+                            data-bs-target="#application-info-1" aria-expanded="true"
+                            aria-controls="application-info-1">
                             Application #1
                         </button>
                     </h2>
                     <div id="application-info-1" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                         <div class="accordion-body">
-                            <span class="company-name" id="company-name-1">ABC Inc.</span>
-                            <span class="job-title" id="job-title-1">Software Developer</span>
-                            <span class="job-posting" id="job-posting-1"><a href="#">Job posting</a></span>
-                            <span class="status" id="status-1">Applied</span>
-                            <span class="contact-email" id="contact-email-1">employer@abcinc.com</span>
-                            <span class="contact-phone" id="contact-phone-1">604-123-4567</span>
-                            <span class="application-date" id="application-date-1">Applied 03/02/2023</span>
-                            <span class="last-contact-time" id="last-contact-time-1">Last contacted: 03/04/2023</span>
+                            <div class="col-md-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Company</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary" >
+                                                <span class="company-name" id="company-name-1">ABC Inc.</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="m-0">Position</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="job-title" id="job-title-1">Software Developer</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Job Posting</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="job-posting" id="job-posting-1"><a href="#">Job posting</a></span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Application Status</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="status" id="status-1">Applied</span></span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Contact Email</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="contact-email" id="contact-email-1">employer@abcinc.com</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Contact Number</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="contact-phone" id="contact-phone-1">604-123-4567</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Application Date</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="application-date" id="application-date-1">03/02/2023</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Last Contacted</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="last-contact-time" id="last-contact-time-1">03/04/2023</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Reflection</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="reflection" id="reflection-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis rem architecto, eveniet odit fugit officiis distinctio! Ipsa veniam alias quas a fugiat. Placeat soluta voluptatum animi doloribus harum culpa obcaecati.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="company-name" id="company-name-1">ABC Inc.</span>
+                                <span class="job-title" id="job-title-1">Software Developer</span>
+                                <span class="job-posting" id="job-posting-1"><a href="#">Job posting</a></span>
+                                <span class="status" id="status-1">Applied</span>
+                                <span class="contact-email" id="contact-email-1">employer@abcinc.com</span>
+                                <span class="contact-phone" id="contact-phone-1">604-123-4567</span>
+                                <span class="application-date" id="application-date-1">Applied 03/02/2023</span>
+                                <span class="last-contact-time" id="last-contact-time-1">Last contacted:
+                                    03/04/2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" id="application-2" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#application-info-2" aria-expanded="false"
+                                aria-controls="application-info-2">
+                                Application #2
+                            </button>
+                        </h2>
+                        <div id="application-info-2" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is
+                                hidden by default, until the collapse plugin adds the
+                                appropriate classes that we use to style each element. These
+                                classes control the overall appearance, as well as the showing
+                                and hiding via CSS transitions. You can modify any of this with
+                                custom CSS or overriding our default variables. It's also worth
+                                noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit
+                                overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" id="application-3" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#application-info-3" aria-expanded="false"
+                                aria-controls="application-info-3">
+                                Application #3
+                            </button>
+                        </h2>
+                        <div id="application-info-3" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is
+                                hidden by default, until the collapse plugin adds the
+                                appropriate classes that we use to style each element. These
+                                classes control the overall appearance, as well as the showing
+                                and hiding via CSS transitions. You can modify any of this with
+                                custom CSS or overriding our default variables. It's also worth
+                                noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit
+                                overflow.
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" id="application-2" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#application-info-2" aria-expanded="false"
-                            aria-controls="application-info-2">
-                            Application #2
-                        </button>
-                    </h2>
-                    <div id="application-info-2" class="accordion-collapse collapse" aria-labelledby="headingTwo">
-                        <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is
-                            hidden by default, until the collapse plugin adds the
-                            appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing
-                            and hiding via CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's also worth
-                            noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit
-                            overflow.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" id="application-3" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#application-info-3" aria-expanded="false"
-                            aria-controls="application-info-3">
-                            Application #3
-                        </button>
-                    </h2>
-                    <div id="application-info-3" class="accordion-collapse collapse" aria-labelledby="headingThree">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is
-                            hidden by default, until the collapse plugin adds the
-                            appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing
-                            and hiding via CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's also worth
-                            noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit
-                            overflow.
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
 
