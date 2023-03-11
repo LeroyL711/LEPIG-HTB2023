@@ -36,10 +36,10 @@
   display: block;
 }
 
-.textbox { 
+.recent-app-text { 
   padding: 0% 20% 0% 20%;
 }
-#recent-app-container{
+#recent-applications{
   display: flex;
   align-items: center;
   justify-content: center;
