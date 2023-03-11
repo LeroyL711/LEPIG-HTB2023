@@ -7,34 +7,26 @@ function loadSkeleton() {
         if (user) {
             // User is signed in.
             // Do something for the user here.
-            $('#afterlogin').load('/text/nav_after_login.html', function() {
-                console.log("After login navbar loaded successfully.");
-            });
+            console.log($('#navbarPlaceholder').load('./text/nav_after_login.html'));
+            console.log($('#footerPlaceholder').load('./text/footer.html'));
         } else {
             // No user is signed in.
-            $('#beforelogin').load('/text/nav_before_login.html', function() {
-                console.log("Before login navbar loaded successfully.");
-            });
+            console.log($('#navbarPlaceholder').load('./text/nav_before_login.html'));
+            console.log($('#footerPlaceholder').load('./text/footer.html'));
         }
     });
-    if ($('#beforelogin').length) {
-        $('#beforelogin').load('/text/nav_before_login.html', function() {
-            console.log("Before login navbar loaded successfully.");
+
+    loadSkeleton(); // Invoke the function
+
+    //------------------------------------------------
+    // Call this function when the "logout" button is clicked
+    //-------------------------------------------------
+    function logout() {
+        firebase.auth().signOut().then(() => {
+            // Sign-out successful.
+            console.log("logging out user");
+        }).catch((error) => {
+            // An error happened.
         });
     }
-}
-loadSkeleton(); // Invoke the function
 
-//------------------------------------------------
-// Call this function when the "logout" button is clicked
-//-------------------------------------------------
-function logout() {
-    firebase.auth().signOut().then(() => {
-        // Sign-out successful.
-        console.log("logging out user");
-      }).catch((error) => {
-        // An error happened.
-      });
-  }
-  
-  
