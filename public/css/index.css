@@ -1,18 +1,28 @@
 .header {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/planning.png");
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  }
-  
-  .header h1, .header p {
-    position: relative;
-    display: block;
-    text-align: center;
-  }
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/planning.png");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.header h1, .header p {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 900px; 
+}
