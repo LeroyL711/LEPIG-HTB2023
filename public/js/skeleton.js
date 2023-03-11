@@ -6,24 +6,31 @@ function loadSkeleton() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
-            // Do something for the user here.
-            $('#afterlogin').load('/text/nav_after_login.html', function() {
-                console.log("After login navbar loaded successfully.");
+            console.log('User is signed in');
+            $('#afterlogin').load('./text/nav_after_login.html', function(response, status, xhr) {
+                console.log('Loaded afterlogin navbar:', status);
+                if (status == 'error') {
+                    console.log('Error loading afterlogin navbar:', xhr.status, xhr.statusText);
+                }
             });
         } else {
             // No user is signed in.
-            $('#beforelogin').load('/text/nav_before_login.html', function() {
-                console.log("Before login navbar loaded successfully.");
+            console.log('No user is signed in');
+            $('#beforelogin').load('./text/nav_before_login.html', function(response, status, xhr) {
+                console.log('Loaded beforelogin navbar:', status);
+                if (status == 'error') {
+                    console.log('Error loading beforelogin navbar:', xhr.status, xhr.statusText);
+                }
             });
         }
-    });
-    if ($('#beforelogin').length) {
-        $('#beforelogin').load('/text/nav_before_login.html', function() {
-            console.log("Before login navbar loaded successfully.");
+        $('#footerPlaceholder').load('./text/footer.html', function(response, status, xhr) {
+            console.log('Loaded footer:', status);
+            if (status == 'error') {
+                console.log('Error loading footer:', xhr.status, xhr.statusText);
+            }
         });
-    }
+    });
 }
-loadSkeleton(); // Invoke the function
 
 //------------------------------------------------
 // Call this function when the "logout" button is clicked
