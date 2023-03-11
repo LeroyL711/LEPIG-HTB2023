@@ -5,8 +5,5 @@
 .navbar-brand {
   font-size: 36px;
   margin-left: 16px;
-}
-
-.navbar-nav > li {
-  color: black;
+  color: white !important;
 }
