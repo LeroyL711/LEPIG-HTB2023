@@ -19,7 +19,11 @@ app.use("/img", express.static("./public/img"));
 
 //Call back function
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/app/html/main.html');
+  res.sendFile(__dirname + '/app/html/index.html');
+});
+
+app.get('/index.html', (req, res) => {
+  res.sendFile(__dirname + '/app/html/index.html');
 });
 
 app.get('/main.html', (req, res) => {
