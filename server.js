@@ -30,8 +30,12 @@ app.get('/main.html', (req, res) => {
   res.sendFile(__dirname + '/app/html/main.html');
 });
 
-app.get('/calendar', (req, res) => {
+app.get('/calendar.html', (req, res) => {
   res.sendFile(__dirname + '/app/html/calendar.html');
+});
+
+app.get('/list.html', (req, res) => {
+  res.sendFile(__dirname + '/app/html/list.html');
 });
 
 app.get('/nav_before_login.html', (req, res) => {
@@ -40,6 +44,10 @@ app.get('/nav_before_login.html', (req, res) => {
 
 app.get('/nav_after_login.html', (req, res) => {
   res.sendFile(__dirname + '/text/nav_after_login.html');
+});
+
+app.get('/footer.html', (req, res) => {
+  res.sendFile(__dirname + 'footer.html');
 });
 
 // For resource not found (i.e., 404)
