@@ -35,6 +35,8 @@
 .profile-name > #username{
   display: block;
 }
-#recent-applications {
-  display: block;
+
+.accordion {
+  align-items: center;
+  
 }
