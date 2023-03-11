@@ -1,6 +1,5 @@
 # Project Title
-Hack the Break 2023
-Theme: Job-Security 
+Hack the Break 2023: Job-Security
 
 ## 1. Project Description
 A job-hunting planner that allows users to...
