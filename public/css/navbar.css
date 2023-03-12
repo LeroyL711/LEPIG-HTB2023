@@ -1,4 +1,3 @@
-
 * {
   font-family: monospace;
   font-size: 14pt;
@@ -18,6 +17,16 @@
   display: block !important;
 }
 
-.nav-link{
+.nav-link {
   text-align: center;
+}
+
+.profile-nav {
+  display: flex;
+  align-items: center;
+}
+
+.profile-nav .material-symbols-outlined {
+  margin-right: 8px;
+  transform: translateX(-16px);
 }
