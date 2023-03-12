@@ -24,7 +24,7 @@ firebase.auth().onAuthStateChanged(user => {
               <td>${data.title}</td>
               <td>${data.status}</td>
               <td>${data.updated_date}</td>
-              <td><a href="/detail.html" data-id="${doc.id}">View</a></td>
+              <td><a href="/detail.html">View</a></td>
             `;
 
             tableBody.appendChild(row);
