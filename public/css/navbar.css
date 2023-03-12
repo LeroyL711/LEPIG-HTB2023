@@ -1,6 +1,7 @@
 
 * {
-  font-family: consolas;
+  font-family: monospace;
+  font-size: 14pt;
 }
 .navbar {
   background-color: #9dc08b !important;
