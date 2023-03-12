@@ -46,6 +46,15 @@ firebase.auth().onAuthStateChanged(function (user) {
             // Update the content of the div with the relevant data
             document.getElementById(`application-${index + 1}`).innerText = ` ${application.title} at ${application.company}`;
             document.getElementById(`company-name-${index + 1}`).innerText = application.company;
+            document.getElementById(`job-title-${index + 1}`).innerText = application.title;
+            document.getElementById(`job-posting-${index + 1}`).innerText = application.link;
+            document.getElementById(`status-${index + 1}`).innerText = application.status;
+            document.getElementById(`contact-email-${index + 1}`).innerText = application.contact_email;
+            document.getElementById(`contact-number-${index + 1}`).innerText = application.contact_number;
+            document.getElementById(`application-date-${index + 1}`).innerText = application.applied_date;
+            document.getElementById(`last-update-time-${index + 1}`).innerText = application.updated_date;
+            document.getElementById(`note-${index + 1}`).innerText = application.note;
+
             index++;
           });
 
