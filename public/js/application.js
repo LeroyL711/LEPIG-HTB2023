@@ -35,6 +35,7 @@ function createApplication() {
             //   window.location.href = "/list.html";
           })
           console.log("application added/updated to firestore");
+          window.location.href = '/list.html';
         })
     } else {
       console.log("No user is signed in");
