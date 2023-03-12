@@ -57,8 +57,3 @@ function handleFormSubmit(event) {
 document.getElementById('update-btn').addEventListener('click', handleFormSubmit);
 
 // pop up message after submitting the application
-var reDirectBtn = document.getElementById("update-btn");
-reDirectBtn.addEventListener("click", function(){
-  window.alert("your form successfully saved");
-  window.location.href="main.html";
-});
