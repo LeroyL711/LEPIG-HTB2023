@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>PlanIt!</title>
+  <title>Applications</title>
   <meta name="LEPIG template" content="HTB App" />
   <meta charset="utf8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -44,48 +44,60 @@
   <!-- navbar here -->
   <nav id="afterlogin"></nav>
   <!-- Your HTML Layout go here -->
-
-  <!-- content of body here -->
-
   <h1 id="my-apps">My Applications</h1>
-
-  <!-- <div class="container">
-    <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" id="filter-btn" data-bs-toggle="dropdown">Filter by
-        Status
-        <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <li><a href="#">Preparing</a></li>
-        <li><a href="#">Submitted</a></li>
-        <li><a href="#">Under Interview</a></li>
-        <li><a href="#">Negotiating</a></li>
-        <li><a href="#">Offered</a></li>
-        <li><a href="#">Rejected</a></li>
-      </ul>
-    </div>
+  <!-- <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'tab1')" data-tab-id="all" data-status="all">All</button>
+    <button class="tablinks" onclick="openTab(event, 'tab2')" data-tab-id="preparing"
+      data-status="preparing">Preparing</button>
+    <button class="tablinks" onclick="openTab(event, 'tab3')" data-tab-id="submitted"
+      data-status="submitted">Submitted</button>
+    <button class="tablinks" onclick="openTab(event, 'tab4')" data-tab-id="shortlisted"
+      data-status="shortlisted">Shortlisted</button>
+    <button class="tablinks" onclick="openTab(event, 'tab5')" data-tab-id="negotiating"
+      data-status="negotiating">Negotiating</button>
+    <button class="tablinks" onclick="openTab(event, 'tab6')" data-tab-id="offered"
+      data-status="offered">Offered</button>
+    <button class="tablinks" onclick="openTab(event, 'tab7')" data-tab-id="declined"
+      data-status="declined">Declined</button>
   </div> -->
-  <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'tab1')">All</button>
-    <button class="tablinks" onclick="openTab(event, 'tab2')">
-      Preparing
-    </button>
-    <button class="tablinks" onclick="openTab(event, 'tab3')">
-      Submitted
-    </button>
-    <button class="tablinks" onclick="openTab(event, 'tab4')">
-      Shortlisted
-    </button>
-    <button class="tablinks" onclick="openTab(event, 'tab5')">
-      Negotiating
-    </button>
-    <button class="tablinks" onclick="openTab(event, 'tab6')">Offered</button>
-    <button class="tablinks" onclick="openTab(event, 'tab7')">
-      Declined
-    </button>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Updated Date</th>
+        <th>Details</th>
 
-    <div id="tab1" class="tabcontent" data-tab-id="all">
-      <ul>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+  </table>
+
+
+  <!-- <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'tab1')">All</button>
+      <button class="tablinks" onclick="openTab(event, 'tab2')">
+        Preparing
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'tab3')">
+        Submitted
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'tab4')">
+        Shortlisted
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'tab5')">
+        Negotiating
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'tab6')">Offered</button>
+      <button class="tablinks" onclick="openTab(event, 'tab7')">
+        Declined
+      </button>
+    </div> -->
+
+  <!-- <div id="tab1" class="tabcontent" data-tab-id="all">
+      <ul id="list">
         <li>placeholder</li>
       </ul>
     </div>
@@ -124,7 +136,7 @@
       <ul>
         <li>placeholder</li>
       </ul>
-    </div>
+    </div> -->
 
   <!-- footer here -->
   <nav id="footerPlaceholder"></nav>

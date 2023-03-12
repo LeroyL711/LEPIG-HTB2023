@@ -17,16 +17,17 @@ body {
 	background-color: #9DC08B !important;
 }
 
-.text-center {
-	font-size: medium;
-}
-
-.firebaseui-title, .mdl-textfield__label, .firebaseui-link, .firebaseui-tos {
+.firebaseui-title, .mdl-textfield__label, .mdl-textfield__input, .firebaseui-id-submit, .firebaseui-link, .firebaseui-tos {
 	font-family: monospace, sans-serif;
 }
 
 .firebaseui-link {
-	font-size: 13px !important;
+	font-size: 12px !important;
+}
+
+.mdl-textfield__label {
+	font-size: 15px !important;
+	font-family: monospace, sans-serif !important;
 }
 
 /* .mdl-textfield__input.firebaseui-input.firebaseui-id-email::before {
@@ -69,22 +70,22 @@ body {
 }
 
 *, :after, :before {
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 .clearfix:after, .clearfix:before {
 	content: '';
-	display: table
+	display: table;
 }
 
 .clearfix:after {
 	clear: both;
-	display: block
+	display: block;
 }
 
 a {
 	color: inherit;
-	text-decoration: none
+	text-decoration: none;
 }
 
 .login-wrap {

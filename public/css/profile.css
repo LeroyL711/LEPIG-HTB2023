@@ -1,21 +1,23 @@
 .container {
   max-width: 1000px;
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
+  display: inline;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-#profile-pic{
-  position: relative;
-  left: 12%;
-  top: 68%;
+
+.profile-pic {
+  width: 50%;
+}
+#footerPlaceholder{
+display: block;
 }
 
 label {
   position: relative;
   top: -60px;
-  left: 105px;
+  left: 55px;
   background-color:white;
   color: black;
   padding: 0.25rem;
