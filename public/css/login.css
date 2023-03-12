@@ -3,7 +3,6 @@ body {
 	color: #6a6f8c;
 	/* background: #9DC08B; */
 	background: #EDF1D6;
-	font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
 .firebaseui-id-submit {
@@ -234,6 +233,3 @@ a {
 	background: rgba(255, 255, 255, .2);
 }
 
-.foot-lnk {
-	text-align: center;
-}

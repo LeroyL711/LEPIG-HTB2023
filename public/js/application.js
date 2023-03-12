@@ -10,7 +10,7 @@ function createApplication() {
   let Location = document.getElementById("job-location").value;
   let Applied = document.getElementById("date-applied").value;
   let Updated = document.getElementById("date-updated").value;;
-  let Note = document.getElementById("date-updated").value;;
+  let Note = document.getElementById("note").value;;
 
   console.log(Company, Title, Link, Status, Location, Applied, Updated, Note);
 

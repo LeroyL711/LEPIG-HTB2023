@@ -85,4 +85,32 @@ function openTab(event, tabId) {
   }
 }
 
+// function populateApplications() {
+//   let listTemplate = document.getElementById("applicationTemplate");
+
+//   let params = new URL(window.location.href) //get the url from the searbar
+//   let listID = params.searchParams.get("docID")
+  
+//   // doublecheck: is your collection called "Reviews" or "reviews"?
+//   db.collection("applications").where( "usersD", "==", listID).get()
+//       .then(allApplications => {
+//           applications=allApplications.docs;
+//           console.log(applications);
+//           applications.forEach(doc => {
+//               var company = doc.data().company; //gets the name field
+
+//               let reviewCard = hikeCardTemplate.content.cloneNode(true);
+//               reviewCard.querySelector('.title').innerHTML = title;     //equiv getElementByClassName
+//               reviewCard.querySelector('.time').innerHTML = new Date(time).toLocaleString();    //equiv getElementByClassName
+//               reviewCard.querySelector('.level').innerHTML = `level: ${level}`;
+//               reviewCard.querySelector('.season').innerHTML = `season: ${season}`;
+//               reviewCard.querySelector('.scrambled').innerHTML = `scrambled: ${scrambled}`;  //equiv getElementByClassName
+//               reviewCard.querySelector('.flooded').innerHTML = `flooded: ${flooded}`;  //equiv getElementByClassName
+//               reviewCard.querySelector('.description').innerHTML = `Description: ${description}`;
+//               hikeCardGroup.appendChild(reviewCard);
+//           })
+//       })
+// }
+// function populateApplications();
+
 
