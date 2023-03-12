@@ -1,6 +1,7 @@
-#container{
+#container {
   padding: 2% 20% 5% 20%;
 }
+
 #user-welcome {
   display: flex;
   align-items: center;
@@ -23,36 +24,36 @@
   overflow: hidden;
 }
 
-#profile-image img{
+#profile-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.profile-name{
+.profile-name {
   display: block;
   padding: 20px;
 }
 
-.profile-name > #username{
+.profile-name>#username {
   display: block;
 }
 
-.accordion-button{
+.accordion-button {
   background-color: #609966;
   margin-bottom: 5px;
 }
 
 .accordion-button:not(.collapsed) {
-  
+
   background-color: #9DC08B;
   color: #EDF1D6;
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
 }
 
 #my-tasks {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #my-tasks li {
@@ -68,12 +69,12 @@ padding: 0;
   user-select: none;
 }
 
-#my-tasks li:nth-child(odd){
+#my-tasks li:nth-child(odd) {
   background: #609966;
 }
 
-#my-tasks li:hover{
-  background:#9DC08B;
+#my-tasks li:hover {
+  background: #9DC08B;
 }
 
 #my-tasks li .checked {
@@ -107,7 +108,7 @@ padding: 0;
 }
 
 #todo-list {
-  background-color:aquamarine;
+  background-color: aquamarine;
   padding: 30px 40px;
   color: black;
   text-align: center;
@@ -144,4 +145,16 @@ input {
 
 .add-button:hover {
   background-color: #bbb;
+}
+
+#todo-list {
+  background-color: #EDF1D6;
+}
+
+.check {
+  background-color: #9DC08B;
+}
+
+h2 {
+  text-align: center;
 }
