@@ -24,7 +24,7 @@
     background: linear-gradient(90deg, #eef093 0%, #8bf0b1 100%);
     overflow: hidden;
   }
-  .contianer {
+  .container {
     width: max-content;
     height: max-content;
     position: relative;
