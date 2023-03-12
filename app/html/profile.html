@@ -31,6 +31,7 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/profile.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -40,7 +41,18 @@
     <nav id="afterlogin"></nav>
     <!-- Your HTML Layout go here -->
     <div id="container">
-        <div id="banner"></div>
+        <div id="banner">
+            <div id="profile-pic">
+                <img src="img/placeholder-profile.png" alt="profle image" class="rounded-circle" id="profile-image" width="150">
+                <form action="">
+                    <label for="img-upload"><span class="material-symbols-outlined">
+                      add_a_photo
+                      </span> </label>
+                    <input type="file" name="filename" id="img-upload" hidden/>
+                    
+                  </form>
+            </div>
+        </div>
     </div>
 
     <!-- footer here -->
