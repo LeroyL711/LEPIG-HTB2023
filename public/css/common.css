@@ -31,7 +31,11 @@
 }
 
 #banner{
-  width: 60vw;
+  width: 100vw;
   height: 30vh;
-  background-color: green;
+  background-image: url(https://dummyimage.com/1920x1080/2f3982/fff);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
