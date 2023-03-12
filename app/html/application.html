@@ -1,101 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Application Details</title>
+    <meta name="LEPIG template" content="HTB App" />
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <title>Application Details</title>
-  <meta name="LEPIG template" content="HTB App" />
-  <meta charset="utf8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!------------------------------------------>
+    <!--- Bootstrap Library CSS JS CDN  here --->
+    <!------------------------------------------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-  <!------------------------------------------>
-  <!--- Bootstrap Library CSS JS CDN  here --->
-  <!------------------------------------------>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
+    />
 
-  <!-------------------------------------------------------->
-  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-  <!-------------------------------------------------------->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <!-------------------------------------------->
+    <!-- Other libraries and styles of your own -->
+    <!-------------------------------------------->
+    <link href="/css/application.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-------------------------------------------->
-  <!-- Other libraries and styles of your own -->
-  <!-------------------------------------------->
-  <link href="/css/application.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-</head>
+  <body>
+    <!-- navbar here -->
+    <nav id="afterlogin"></nav>
 
-<body>
-  <!-- navbar here -->
-  <nav id="afterlogin"></nav>
+    <div style="display: flex; justify-content: center">
+      <div class="container">
+        <div class="job-application">
+          <h3>Your Job Application Info</h3>
 
-  <div style="display: flex; justify-content: center">
-    <div class="container">
-      <div class="job-application">
-        <h3>Info about Your Job Application</h3>
+          <label for="company">🏢 Company:</label>
+          <input type="text" id="job-title" name="company" /><br />
 
-        <label for="company">🏢 Company:</label>
-        <input type="text" id="job-title" name="company" /><br />
+          <label for="job-title">💼 Job Position:</label>
+          <input type="text" id="job-title" name="job-title" /><br />
 
-        <label for="job-title">💼 Job Position:</label>
-        <input type="text" id="job-title" name="job-title" /><br />
+          <label for="link">🔗 Hiring Link:</label>
+          <input type="text" id="link" name="link" /><br />
 
-        <label for="link">🔗 Hiring Link:</label>
-        <input type="text" id="link" name="link" /><br />
+          <label for="status">👣 Status</label>
+          <br />
+          <select id="status" name="status">
+            <option value="prospect">Prospect</option>
+            <option value="applied">Applied</option>
+            <option value="in_interviews">In Interviews</option>
+            <option value="negotiating">Negotiating Offer</option>
+            <option value="follow_up">Requires Follow-Up</option>
+            <option value="rejected">Rejected</option></select
+          ><br />
 
-        <label for="status">👣 Status</label>
-        <br>
-        <select id="status" name="status">
-          <option value="prospect">Prospect</option>
-          <option value="applied">Applied</option>
-          <option value="in_interviews">In Interviews</option>
-          <option value="negotiating">Negotiating Offer</option>
-          <option value="follow_up">Requires Follow-Up</option>
-          <option value="rejected">Rejected</option>
-        </select><br />
+          <label for="job-location">📍 Location:</label>
+          <input type="text" id="job-location" name="job-location" /><br />
 
+          <label for="job-description">ℹ️ Job description:</label>
+          <textarea id="job-description" name="job-description"></textarea
+          ><br />
 
-        <label for="job-location">📍 Location:</label>
-        <input type="text" id="job-location" name="job-location" /><br />
+          <label for="date-applied">📅 Date Applied:</label>
+          <input type="date" id="date-applied" name="date-applied" /><br />
 
-        <label for="job-description">ℹ️ Job description:</label>
-        <textarea id="job-description" name="job-description"></textarea><br />
+          <label for="date-updated">📅 Date Updated:</label>
+          <input type="date" id="date-updated" name="date-updated" /><br />
 
+          <br />
 
-        <label for="date-applied">📅 Date Applied:</label>
-        <input type="date" id="date-applied" name="date-applied" /><br />
+          <label for="note">📝 Note:</label>
+          <textarea id="note" name="note"></textarea><br />
 
-        <label for="date-updated">📅 Date Updated:</label>
-        <input type="date" id="date-updated" name="date-updated" /><br />
-
-        <label for="note">📝 Note:</label>
-        <textarea id="note" name="note"></textarea><br />
-
-        <div class="btn-container">
-          <button type="submit">Update</button>
+          <div class="btn-container">
+            <button type="submit">Update</button>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
 
-  <!-- footer here-->
-  <nav id="footerPlaceholder"></nav>
+    <!-- footer here-->
+    <nav id="footerPlaceholder"></nav>
 
-  <!---------------------------------------------->
-  <!------- JavaScript functions go here --------->
-  <!---------------------------------------------->
-  <script src="/js/firebaseAPI.js"></script>
-  <script src="/js/skeleton.js"></script>
-</body>
-
+    <!---------------------------------------------->
+    <!------- JavaScript functions go here --------->
+    <!---------------------------------------------->
+    <script src="/js/firebaseAPI.js"></script>
+    <script src="/js/skeleton.js"></script>
+  </body>
 </html>
