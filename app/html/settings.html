@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Your Job Application Info</title>
+    <meta name="LEPIG template" content="HTB App" />
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!------------------------------------------>
+    <!--- Bootstrap Library CSS JS CDN  here --->
+    <!------------------------------------------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
+    />
+
+    <!-------------------------------------------->
+    <!-- Other libraries and styles of your own -->
+    <!-------------------------------------------->
+    <link href="/css/settings.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/common.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body>
+    <!-- navbar here -->
+    <nav id="afterlogin"></nav>
+
+    <h1>Settings</h1>
+    <form action="#" method="POST">
+      <h2>Job Preferences</h2>
+      <label for="job_title">Job Title:</label>
+      <input type="text" id="job_title" name="job_title" /><br />
+      <label for="industry">Industry:</label>
+      <input type="text" id="industry" name="industry" /><br />
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" /><br />
+
+      <h2>Notification Preferences</h2>
+      <label for="frequency">Frequency:</label>
+      <select id="frequency" name="frequency">
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option></select
+      ><br />
+      <label for="method">Method:</label>
+      <select id="method" name="method">
+        <option value="email">Email</option>
+        <option value="push">Push Notification</option>
+        <option value="sms">SMS</option></select
+      ><br />
+
+      <h2>Resume/CV Upload</h2>
+      <input type="file" id="resume" name="resume" /><br />
+
+      <h2>Privacy Settings</h2>
+      <label for="visibility">Profile Visibility:</label>
+      <select id="visibility" name="visibility">
+        <option value="public">Public</option>
+        <option value="private">Private</option></select
+      ><br />
+      <input
+        type="checkbox"
+        id="hide_activity"
+        name="hide_activity"
+        value="hide_activity"
+      />
+      <label for="hide_activity">Hide Activity From Recruiters</label><br />
+
+      <h2>Social Media Integration</h2>
+      <input
+        type="checkbox"
+        id="connect_facebook"
+        name="connect_facebook"
+        value="connect_facebook"
+      />
+      <label for="connect_facebook">Connect with Facebook</label><br />
+      <input
+        type="checkbox"
+        id="connect_linkedin"
+        name="connect_linkedin"
+        value="connect_linkedin"
+      />
+      <label for="connect_linkedin">Connect with LinkedIn</label><br />
+
+      <input type="submit" value="Save" />
+    </form>
+
+    <!-- footer here-->
+    <nav id="footerPlaceholder"></nav>
+
+    <!---------------------------------------------->
+    <!------- JavaScript functions go here --------->
+    <!---------------------------------------------->
+    <script src="/js/firebaseAPI.js"></script>
+    <script src="/js/skeleton.js"></script>
+  </body>
+</html>
