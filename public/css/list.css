@@ -16,9 +16,11 @@
     }
 
     .tab {
+      display: flex;
       overflow: hidden;
       border: 1px solid #ccc;
       background-color: #f1f1f1;
+      justify-content: center;
     }
 
     .tab button {
