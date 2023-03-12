@@ -26,8 +26,9 @@ firebase.firestore().collection("users").get()
                 document.getElementById("link-editview").value = existingData.link;
                 // get the dropdown element by ID
                 const statusDropdown = document.getElementById("status-editview");
-                let selectedStatusIndex = statusDropdown.selectedIndex; // get the index of the selected option
-                statusDropdown.options[selectedStatusIndex].value = existingData.status; // get the value of the selected option
+                let selectedStatusIndex = Array.from(statusDropdown.options).findIndex(option => option.value === existingData.status);
+                statusDropdown.selectedIndex = selectedStatusIndex;
+
                 document.getElementById("job-location-editview").value = existingData.location;
                 document.getElementById("date-applied-editview").value = existingData.applied_date;
                 document.getElementById("date-updated-editview").value = existingData.updated_date;
@@ -52,9 +53,8 @@ firebase.firestore().collection("users").get()
   });
 
 // add click event listener to edit button
-const updateBtn = document.querySelector('#update-btn-editview');
 
-updateBtn.addEventListener('click', () => {
+function updateApplication() {
   let Company = document.getElementById("company-editview").value;
   let Title = document.getElementById("job-title-editview").value;
   let Link = document.getElementById("link-editview").value;
@@ -83,11 +83,18 @@ updateBtn.addEventListener('click', () => {
   };
   applicationRef.update(newData)
     .then(() => {
-      console.log('Document updated successfully!');
+      alert("Application successfully updated!");
+      window.location.href = 'list.html';
     })
     .catch((error) => {
       console.error('Error updating document: ', error);
+
     });
-});
+}
 
+function handleFormUpdate(event) {
+  event.preventDefault();
+  updateApplication();
+}
 
+document.getElementById('update-btn-editview').addEventListener('click', handleFormUpdate);
