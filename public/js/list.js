@@ -24,7 +24,7 @@ firebase.auth().onAuthStateChanged(user => {
               <td>${data.title}</td>
               <td>${data.status}</td>
               <td>${data.updated_date}</td>
-              <td><a href="edit.html?id=${doc.id}" data-id="${doc.id}">View Details</a></td>
+              <td><a href="/detail.html" data-id="${doc.id}">View</a></td>
             `;
 
             tableBody.appendChild(row);
@@ -36,3 +36,17 @@ firebase.auth().onAuthStateChanged(user => {
       });
   }
 });
+
+// add click event listener to each row of the table
+const rows = document.querySelectorAll('tbody tr');
+rows.forEach(row => {
+  row.addEventListener('click', () => {
+    // get the document ID
+    const docId = row.getAttribute('data-id');
+    // store the document ID in localStorage
+    localStorage.setItem('docId', docId);
+    // redirect to the detail page
+    window.location.href = 'detail.html';
+  });
+});
+
