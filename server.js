@@ -62,12 +62,20 @@ app.get('/nav_after_login.html', (req, res) => {
   res.sendFile(__dirname + '/text/nav_after_login.html');
 });
 
-app.get('/footer.html', (req, res) => {
-  res.sendFile(__dirname + '/text/footer.html');
+app.get('/footer_before_login.html', (req, res) => {
+  res.sendFile(__dirname + '/text/footer_before_login.html');
+});
+
+app.get('/footer_after_login.html', (req, res) => {
+  res.sendFile(__dirname + '/text/footer_after_login.html');
 });
 
 app.get('/aboutus.html', (req, res) => {
   res.sendFile(__dirname + '/app/html/aboutus.html');
+});
+
+app.get('/detail.html', (req, res) => {
+  res.sendFile(__dirname + '/app/html/detail.html');
 });
 
 // For resource not found (i.e., 404)
