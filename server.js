@@ -66,8 +66,8 @@ app.get('/footer.html', (req, res) => {
   res.sendFile(__dirname + '/text/footer.html');
 });
 
-app.get('/about-us.html', (req, res) => {
-  res.sendFile(__dirname + '/app/html/about-us.html');
+app.get('/aboutus.html', (req, res) => {
+  res.sendFile(__dirname + '/app/html/aboutus.html');
 });
 
 // For resource not found (i.e., 404)
