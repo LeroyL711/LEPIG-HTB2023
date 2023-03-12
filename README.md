@@ -41,7 +41,8 @@ What we'd like to build in the future:
 Content of the project folder:
 
 ```
- Top level of project folder: 
+ Top level of project folder:
+ 
 ├── app                      # Folder for HTML files
 ├── node_modules             # Folder for node modules
 ├── public                   # Folder for CSS/JS files, images

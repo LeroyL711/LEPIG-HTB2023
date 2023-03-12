@@ -1,24 +1,45 @@
 .container {
-  max-width: 1000px;
-  display: inline;
-  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
   justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  border: 1px solid #dddddd;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.profile h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #609966;
   text-align: center;
 }
 
-.profile-pic {
-  width: 50%;
+.profile h4 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.profile label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .profile button[type="edit"] {
-  background-color: #9DC08B;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
+    background-color: #9DC08B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
 
 .profile button[type="edit"]:hover {
   background-color: #609966;
