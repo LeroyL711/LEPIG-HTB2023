@@ -7,3 +7,8 @@
   margin-left: 16px;
   color: white !important;
 }
+
+.material-symbols-outlined{
+  display: block !important;
+  text-align: center;
+}
