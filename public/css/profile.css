@@ -6,12 +6,26 @@
   text-align: center;
 }
 
-
 .profile-pic {
   width: 50%;
 }
-#footerPlaceholder{
-display: block;
+
+.profile button[type="edit"] {
+  background-color: #9DC08B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.profile button[type="edit"]:hover {
+  background-color: #609966;
+}
+
+.btn-container {
+  text-align: center;
 }
 
 label {
@@ -21,11 +35,10 @@ label {
   background-color:white;
   color: black;
   padding: 0.25rem;
-  border-radius: 1.5rem;
+  border-radius: 10px;
   border: 2px solid black;
   cursor: pointer;
   margin-top: 1rem;
   text-align: center;
-
 }
 
