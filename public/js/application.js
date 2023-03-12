@@ -41,7 +41,10 @@ function createApplication() {
             // }).then(() => {
             //   window.location.href = "/list.html";
           })
-          console.log("application added/updated to firestore");
+            .then(() => {
+              alert("Application successfully saved!");
+              window.location.href = 'main.html';
+            })
         })
     } else {
       console.log("No user is signed in");
@@ -57,8 +60,8 @@ function handleFormSubmit(event) {
 document.getElementById('update-btn').addEventListener('click', handleFormSubmit);
 
 // pop up message after submitting the application
-var reDirectBtn = document.getElementById("update-btn");
-reDirectBtn.addEventListener("click", function(){
-  window.alert("your form successfully saved");
-  window.location.href="main.html";
-});
+// var reDirectBtn = document.getElementById("update-btn");
+// reDirectBtn.addEventListener("click", function(){
+//   window.alert("your form successfully saved");
+//   window.location.href="main.html";
+// });
