@@ -32,18 +32,39 @@
   <!-------------------------------------------->
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/list.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
   <!-- navbar here -->
-  <nav id="navbarPlaceholder"></nav>
+  <nav id="afterlogin"></nav>
   <!-- Your HTML Layout go here -->
   <!-- I will embed the google calender to this page -->
 
 
   <!-- content of body here -->
+
+  <h1>Track Your Job Applications!</h1>
+
+  <div class="container">
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" id="filter-btn" data-toggle="dropdown">Filter by
+        Status
+        <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Preparing</a></li>
+        <li><a href="#">Submitted</a></li>
+        <li><a href="#">Under Interview</a></li>
+        <li><a href="#">Negotiating</a></li>
+        <li><a href="#">Offered</a></li>
+        <li><a href="#">Rejected</a></li>
+      </ul>
+    </div>
+  </div>
+
 
   <!-- footer here -->
   <nav id="footerPlaceholder"></nav>
@@ -51,7 +72,10 @@
   <!---------------------------------------------->
   <!------- JavaScript functions go here   ------->
   <!---------------------------------------------->
-  <script src="./script/skeleton.js"></script>
+  <script src="/js/firebaseAPI.js"></script>
+  <script src="/js/skeleton.js"></script>
+  <script src="/js/list.js"></script>
+
 
 </body>
 
