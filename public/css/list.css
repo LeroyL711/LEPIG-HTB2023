@@ -6,6 +6,10 @@
       border-radius: 0;
       background: #f1f1f1;
     } */
+    .container {
+      text-align: center;
+    }
+
     #my-apps {
       color: #9DC08B;
       text-align: center;
@@ -76,4 +80,41 @@
       .tabcontent {
         padding: 12px;
       }
+    }
+
+    #application-table {
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    #application-table thead tr {
+      background-color: #9DC08B;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    #application-table th,
+    #application-table td {
+      padding: 12px 15px;
+    }
+
+    #application-table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    #application-table tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    #application-table tbody tr:last-of-type {
+      border-bottom: 2px solid #9DC08B;
+    }
+
+    #application-table tbody tr.active-row {
+      font-weight: bold;
+      color: #9DC08B;
     }

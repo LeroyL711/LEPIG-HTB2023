@@ -36,17 +36,17 @@ firebase.auth().onAuthStateChanged(user => {
       });
   }
 });
-
-// add click event listener to each row of the table
-const rows = document.querySelectorAll('tbody tr');
-rows.forEach(row => {
-  row.addEventListener('click', () => {
-    // get the document ID
-    const docId = row.getAttribute('data-id');
-    // store the document ID in localStorage
-    localStorage.setItem('docId', docId);
-    // redirect to the detail page
-    window.location.href = 'detail.html';
+const table = document.querySelector('table');
+document.addEventListener('DOMContentLoaded', () => {
+  const rows = document.querySelectorAll('tr');
+  rows.forEach(row => {
+    console.log('Adding click event listener to row:', row);
+    row.addEventListener('click', () => {
+      let params = new URL(window.location.href) //get the url from the search bar
+      let ID = params.searchParams.get("docID");
+      localStorage.setItem('docId', ID);
+      window.location.href = 'detail.html';
+    }
+    );
   });
 });
-

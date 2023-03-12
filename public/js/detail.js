@@ -1,32 +1,61 @@
 // get the document ID from localStorage
 const docId = localStorage.getItem('docId');
+// get a reference to the "users" collection
+const usersRef = db.collection("users");
 
-// fetch the data for the document
-const docRef = db.collection('users').doc(userId).collection('applications').doc(docId);
-docRef.get().then(doc => {
-  if (doc.exists) {
-    // display the data in the form
-    const data = doc.data();
-    // ...
-  } else {
-    console.log('Document not found');
-  }
-}).catch(error => {
-  console.log('Error getting document:', error);
-});
+// perform a query to search for the document that contains the application ID
+usersRef.where(`applications.${docId}`, '!=', null).get()
+  .then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      // get the user ID
+      const userId = doc.id;
+      console.log(`User ID: ${userId}`);
+      // get a reference to the application document
+      const applicationRef = doc.ref.collection("applications").doc(docId);
+      // Retrieve the existing data from the document
+      applicationRef.get().then((doc) => {
+        if (doc.exists) {
+          const existingData = doc.data();
+          // Use the existing data to populate the form
+          document.getElementById("company-editview").value = existingData.company;
+          document.getElementById("job-title-editview").value = existingData.title;
+          document.getElementById("link-editview").value = existingData.link;
+          document.getElementById("status-editview"); // get the dropdown element by ID
+          let selectedStatusIndex = statusDropdown.selectedIndex; // get the index of the selected option
+          statusDropdown.options[selectedStatusIndex].value = existingData.status; // get the value of the selected option
+          document.getElementById("job-location-editview").value = existingData.location;
+          document.getElementById("date-applied-editview").value = existingData.applied_date;
+          document.getElementById("date-updated-editview").value = existingData.updated_date;;
+          document.getElementById("note-editview").value = existingData.note;;
+          document.getElementById("job-description-editview").value = existingData.job_description;;
+          document.getElementById("contact-email-editview").value = existingData.contact_email;;
+          document.getElementById("contact-number-editview").value = existingData.contact_number;;
+
+        } else {
+          console.log("No such document!");
+        }
+      }).catch((error) => {
+        console.log("Error getting document:", error);
+      });
+    });
+  })
+  .catch((error) => {
+    console.log("Error getting documents: ", error);
+  });
 
 // add click event listener to edit button
-const editBtn = document.getElementById('edit-btn');
-editBtn.addEventListener('click', () => {
-  // redirect to the edit page with the document ID in the URL
-  window.location.href = `edit.html?docId=${docId}`;
+const updateBtn = document.querySelector('#update-btn-editview');
+updateBtn.addEventListener('click', () => {
+  const newData = {
+  };
+  applicationRef.update(newData)
+    .then(() => {
+      console.log('Document updated successfully!');
+    })
+    .catch((error) => {
+      console.error('Error updating document: ', error);
+    });
 });
 
-// add click event listener to save button
-const saveBtn = document.getElementById('save-btn');
-saveBtn.addEventListener('click', () => {
-  // save the changes to the document
-  // ...
-});
 
 
