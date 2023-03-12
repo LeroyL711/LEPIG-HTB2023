@@ -55,12 +55,12 @@
         <label for="status">👣 Status</label>
         <br>
         <select id="status" name="status">
-          <option value="prospect">Prospect</option>
-          <option value="applied">Applied</option>
-          <option value="in_interviews">In Interviews</option>
-          <option value="negotiating">Negotiating Offer</option>
-          <option value="follow_up">Requires Follow-Up</option>
-          <option value="rejected">Rejected</option>
+          <option value="Prospect">Prospect</option>
+          <option value="Applied">Applied</option>
+          <option value="In Interviews">In Interviews</option>
+          <option value="Negotiating Offer">Negotiating Offer</option>
+          <option value="Requires Follow Up">Requires Follow-Up</option>
+          <option value="Rejected">Rejected</option>
         </select><br />
 
 
@@ -81,7 +81,7 @@
         <textarea id="note" name="note"></textarea><br />
 
         <div class="btn-container">
-          <button type="submit">Update</button>
+          <button type="submit" id="update-btn">Save Application</button>
         </div>
 
       </div>
@@ -96,6 +96,8 @@
   <!---------------------------------------------->
   <script src="/js/firebaseAPI.js"></script>
   <script src="/js/skeleton.js"></script>
+  <script src="/js/application.js"></script>
+
 </body>
 
 </html>

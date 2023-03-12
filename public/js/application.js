@@ -1,14 +1,18 @@
 
 function createApplication() {
-  console.log("inside write review")
+  console.log("inside createApplication")
   let Company = document.getElementById("company").value;
   let Title = document.getElementById("job-title").value;
   let Link = document.getElementById("link").value;
-  let Status = document.querySelector("status").options[document.querySelector("status").selectedIndex.value];
+  let statusDropdown = document.getElementById("status"); // get the dropdown element by ID
+  let selectedStatusIndex = statusDropdown.selectedIndex; // get the index of the selected option
+  let Status = statusDropdown.options[selectedStatusIndex].value; // get the value of the selected option
   let Location = document.getElementById("job-location").value;
   let Applied = document.getElementById("date-applied").value;
-  let Applied = document.getElementById("date-applied").value;;
-  console.log(Title, Level, Season, Description, Flooded, Scrambled);
+  let Updated = document.getElementById("date-updated").value;;
+  let Note = document.getElementById("date-updated").value;;
+
+  console.log(Company, Title, Link, Status, Location, Applied, Updated, Note);
 
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
@@ -18,23 +22,29 @@ function createApplication() {
       currentUser.get()
         .then(userDoc => {
           var userEmail = userDoc.data().email;
-          db.collection("reviews").add({
-            hikeDocID: hikeDocID,
-            userID: userID,
+          db.collection("users").doc(user.uid).collection("applications").doc().set({
+            company: Company,
             title: Title,
-            level: Level,
-            season: Season,
-            description: Description,
-            flooded: Flooded,
-            scrambled: Scrambled,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
-          }).then(() => {
-            window.location.href = "thanks.html"; //new line added
+            link: Link,
+            status: Status,
+            location: Location,
+            applied_date: Applied,
+            updated_date: Updated,
+            note: Note
+            // }).then(() => {
+            //   window.location.href = "/list.html";
           })
+          console.log("application added/updated to firestore");
         })
     } else {
       console.log("No user is signed in");
-      window.location.href = 'application.html';
+      window.location.href = '/application.html';
     }
   });
 }
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+  createApplication();
+}
+document.getElementById('update-btn').addEventListener('click', handleFormSubmit);
