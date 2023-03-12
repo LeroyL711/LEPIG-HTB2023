@@ -30,3 +30,13 @@
   margin-right: 8px;
   transform: translateX(-16px);
 }
+
+
+/* About us css goes here */
+.container {
+  width: 80%;
+  background-color: #d4f0d185;
+  padding: 2em;
+  margin: auto;
+  border-radius: 15px;
+}
