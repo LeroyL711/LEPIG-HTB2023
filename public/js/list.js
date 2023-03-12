@@ -24,8 +24,8 @@ firebase.auth().onAuthStateChanged(user => {
               <td>${data.title}</td>
               <td>${data.status}</td>
               <td>${data.updated_date}</td>
-              <td><a href="/detail.html">View</a></td>
-            `;
+              <td><a href="/detail.html?docID=${doc.id}">View</a></td>
+              `;
 
             tableBody.appendChild(row);
           });
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let params = new URL(window.location.href) //get the url from the search bar
       let ID = params.searchParams.get("docID");
       localStorage.setItem('docId', ID);
-      window.location.href = 'detail.html';
+      window.location.href = `detail.html?docID=${doc.id}`;
     }
     );
   });

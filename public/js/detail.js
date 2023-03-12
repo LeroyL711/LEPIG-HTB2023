@@ -1,5 +1,6 @@
 // get the document ID from localStorage
 const docId = localStorage.getItem('docId');
+console.log(docId);
 // get a reference to the "users" collection
 const usersRef = db.collection("users");
 

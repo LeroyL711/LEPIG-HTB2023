@@ -6,10 +6,6 @@
       border-radius: 0;
       background: #f1f1f1;
     } */
-    .container {
-      text-align: center;
-    }
-
     #my-apps {
       color: #9DC08B;
       text-align: center;
@@ -87,7 +83,6 @@
       margin: 25px 0;
       font-size: 0.9em;
       font-family: sans-serif;
-      min-width: 400px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     }
 
@@ -117,4 +112,9 @@
     #application-table tbody tr.active-row {
       font-weight: bold;
       color: #9DC08B;
+    }
+
+    .container {
+      display: grid;
+      justify-content: center;
     }
