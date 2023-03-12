@@ -4,15 +4,10 @@
 }
 
 .job-application {
-  border: 1px solid #ccc;
+  border: 1px solid #dddddd;
   padding: 20px;
   margin-top: 50px;
   border-radius: 10px;
-}
-
-.job-application h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
 }
 
 .job-application p {
@@ -31,11 +26,6 @@
   margin-bottom: 5px;
 }
 
-.job-application h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
 .job-application h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
@@ -51,12 +41,12 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 30px;
-  border: 1px solid #ccc;
+  border: 1px solid #dddddd;
   border-radius: 5px;
 }
 
 .job-application label {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 10px;
 }

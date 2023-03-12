@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Application Details</title>
+  <title>Your Job Application Info</title>
   <meta name="LEPIG template" content="HTB App" />
   <meta charset="utf8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,7 +31,9 @@
   <!-- Other libraries and styles of your own -->
   <!-------------------------------------------->
   <link href="/css/application.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/css/common.css" type="text/css"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -41,7 +43,7 @@
   <div style="display: flex; justify-content: center">
     <div class="container">
       <div class="job-application">
-        <h3>Info about Your Job Application</h3>
+        <h3>Your Job Application Info</h3>
 
         <label for="company">🏢 Company:</label>
         <input type="text" id="company" name="company" /><br />
@@ -52,8 +54,8 @@
         <label for="link">🔗 Hiring Link:</label>
         <input type="text" id="link" name="link" /><br />
 
-        <label for="status">👣 Status</label>
-        <br>
+        <label for="status">👣 Status:</label>
+        <br />
         <select id="status" name="status">
           <option value="Prospect">Prospect</option>
           <option value="Applied">Applied</option>
@@ -63,13 +65,11 @@
           <option value="Rejected">Rejected</option>
         </select><br />
 
-
         <label for="job-location">📍 Location:</label>
         <input type="text" id="job-location" name="job-location" /><br />
 
         <label for="job-description">ℹ️ Job description:</label>
         <textarea id="job-description" name="job-description"></textarea><br />
-
 
         <label for="date-applied">📅 Date Applied:</label>
         <input type="date" id="date-applied" name="date-applied" /><br />
@@ -77,13 +77,14 @@
         <label for="date-updated">📅 Date Updated:</label>
         <input type="date" id="date-updated" name="date-updated" /><br />
 
+        <br />
+
         <label for="note">📝 Note:</label>
         <textarea id="note" name="note"></textarea><br />
 
         <div class="btn-container">
           <button type="submit" id="update-btn">Save Application</button>
         </div>
-
       </div>
     </div>
   </div>
