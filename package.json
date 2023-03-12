@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/LeroyL711/LEPIG-HTB2023/issues"
   },
-  "homepage": "https://github.com/LeroyL711/LEPIG-HTB2023#readme"
+  "homepage": "https://github.com/LeroyL711/LEPIG-HTB2023#readme",
+  "devDependencies": {}
 }
