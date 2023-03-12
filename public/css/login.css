@@ -5,8 +5,28 @@ body {
 	background: #EDF1D6;
 }
 
+.container {
+	height: 100vh;
+}
+
+#footerPlaceholder {
+	height: 20px;
+}
+
 .firebaseui-id-submit {
 	background-color: #9DC08B !important;
+}
+
+.text-center {
+	font-size: medium;
+}
+
+.firebaseui-title, .mdl-textfield__label, .firebaseui-link, .firebaseui-tos {
+	font-family: monospace, sans-serif;
+}
+
+.firebaseui-link {
+	font-size: 13px !important;
 }
 
 /* .mdl-textfield__input.firebaseui-input.firebaseui-id-email::before {
@@ -232,4 +252,3 @@ a {
 	margin: 60px 0 50px 0;
 	background: rgba(255, 255, 255, .2);
 }
-
