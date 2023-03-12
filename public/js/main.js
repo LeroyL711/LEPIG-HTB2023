@@ -34,14 +34,19 @@ firebase.auth().onAuthStateChanged(function (user) {
         .then((querySnapshot) => {
           console.log("Retrieved applications successfully:", querySnapshot);
 
-          querySnapshot.forEach((doc, index) => {
+          let index = 0;
+          querySnapshot.forEach((doc) => {
             const application = doc.data();
+            console.log(doc.id);
             console.log(application);
+            console.log(index);
+
             console.log(`application-${index + 1}: `, document.getElementById(`application-${index + 1}`));
 
             // Update the content of the div with the relevant data
-            document.getElementById(`application-${index + 1}`).innerText = `${application.title} at ${application.company}`;
+            document.getElementById(`application-${index + 1}`).innerText = ` ${application.title} at ${application.company}`;
             document.getElementById(`company-name-${index + 1}`).innerText = application.company;
+            index++;
           });
 
           if (querySnapshot.empty) {
