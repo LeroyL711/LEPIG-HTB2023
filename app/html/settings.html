@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Your Job Application Info</title>
+    <title>Settings</title>
     <meta name="LEPIG template" content="HTB App" />
     <meta charset="utf8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -55,65 +55,63 @@
     <!-- navbar here -->
     <nav id="afterlogin"></nav>
 
-    <h1>Settings</h1>
-    <form action="#" method="POST">
-      <h2>Job Preferences</h2>
-      <label for="job_title">Job Title:</label>
-      <input type="text" id="job_title" name="job_title" /><br />
-      <label for="industry">Industry:</label>
-      <input type="text" id="industry" name="industry" /><br />
-      <label for="location">Location:</label>
-      <input type="text" id="location" name="location" /><br />
+    <div style="display: flex; justify-content: center">
+      <div class="container">
+        <div class="settings">
+          <h3>Settings</h3>
+          <form action="#" method="POST">
+            <h4>Notification Preferences</h4>
+            <label for="frequency">Frequency:</label>
+            <select id="frequency" name="frequency">
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option></select
+            ><br />
+            <label for="method">Method:</label>
+            <select id="method" name="method">
+              <option value="email">Email</option>
+              <option value="push">Push Notification</option>
+              <option value="sms">SMS</option></select
+            ><br />
 
-      <h2>Notification Preferences</h2>
-      <label for="frequency">Frequency:</label>
-      <select id="frequency" name="frequency">
-        <option value="daily">Daily</option>
-        <option value="weekly">Weekly</option>
-        <option value="monthly">Monthly</option></select
-      ><br />
-      <label for="method">Method:</label>
-      <select id="method" name="method">
-        <option value="email">Email</option>
-        <option value="push">Push Notification</option>
-        <option value="sms">SMS</option></select
-      ><br />
+            <h4>Privacy Settings</h4>
+            <label for="visibility">Profile Visibility:</label>
+            <select id="visibility" name="visibility">
+              <option value="public">Public</option>
+              <option value="private">Private</option></select
+            ><br />
+            <input
+              type="checkbox"
+              id="hide_activity"
+              name="hide_activity"
+              value="hide_activity"
+            />
+            <label for="hide_activity">Hide Activity From Recruiters</label
+            ><br />
 
-      <h2>Resume/CV Upload</h2>
-      <input type="file" id="resume" name="resume" /><br />
+            <h4>Social Media Integration</h4>
+            <input
+              type="checkbox"
+              id="connect_facebook"
+              name="connect_facebook"
+              value="connect_facebook"
+            />
+            <label for="connect_facebook">Connect with Facebook</label><br />
+            <input
+              type="checkbox"
+              id="connect_linkedin"
+              name="connect_linkedin"
+              value="connect_linkedin"
+            />
+            <label for="connect_linkedin">Connect with LinkedIn</label><br />
 
-      <h2>Privacy Settings</h2>
-      <label for="visibility">Profile Visibility:</label>
-      <select id="visibility" name="visibility">
-        <option value="public">Public</option>
-        <option value="private">Private</option></select
-      ><br />
-      <input
-        type="checkbox"
-        id="hide_activity"
-        name="hide_activity"
-        value="hide_activity"
-      />
-      <label for="hide_activity">Hide Activity From Recruiters</label><br />
-
-      <h2>Social Media Integration</h2>
-      <input
-        type="checkbox"
-        id="connect_facebook"
-        name="connect_facebook"
-        value="connect_facebook"
-      />
-      <label for="connect_facebook">Connect with Facebook</label><br />
-      <input
-        type="checkbox"
-        id="connect_linkedin"
-        name="connect_linkedin"
-        value="connect_linkedin"
-      />
-      <label for="connect_linkedin">Connect with LinkedIn</label><br />
-
-      <input type="submit" value="Save" />
-    </form>
+            <div class="btn-container">
+              <button type="submit" id="update-btn">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- footer here-->
     <nav id="footerPlaceholder"></nav>

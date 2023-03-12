@@ -1,0 +1,38 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings {
+  border: 1px solid #dddddd;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.settings h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #609966;
+  text-align: center;
+}
+
+.settings h4 {
+    font-size: 1.5rem;
+  }
+
+.settings label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.settings button[type="submit"]:hover {
+  background-color: #609966;
+}
+
+.btn-container {
+  text-align: center;
+}
