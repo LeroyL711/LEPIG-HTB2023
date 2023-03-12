@@ -67,7 +67,7 @@ app.get('/footer.html', (req, res) => {
 });
 
 app.get('/footer.html', (req, res) => {
-  res.sendFile(__dirname + '/text/about-us.html');
+  res.sendFile(__dirname + '/text/aboutus.html');
 });
 
 // For resource not found (i.e., 404)
