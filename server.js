@@ -34,6 +34,10 @@ app.get('/main.html', (req, res) => {
   res.sendFile(__dirname + '/app/html/main.html');
 });
 
+app.get('/application.html', (req, res) => {
+  res.sendFile(__dirname + '/app/html/application.html');
+});
+
 app.get('/calendar.html', (req, res) => {
   res.sendFile(__dirname + '/app/html/calendar.html');
 });
