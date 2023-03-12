@@ -66,10 +66,6 @@ app.get('/footer.html', (req, res) => {
   res.sendFile(__dirname + '/text/footer.html');
 });
 
-app.get('/footer_after_login.html', (req, res) => {
-  res.sendFile(__dirname + '/text/footer_after_login.html');
-});
-
 app.get('/aboutus.html', (req, res) => {
   res.sendFile(__dirname + '/app/html/aboutus.html');
 });
