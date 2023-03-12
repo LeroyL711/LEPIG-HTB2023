@@ -2,377 +2,399 @@
 <html lang="en">
 
 <head>
-  <title>Homepage</title>
-  <meta name="LEPIG template" content="HTB App" />
-  <meta charset="utf8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homepage</title>
+    <meta name="LEPIG template" content="HTB App" />
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!------------------------------------------>
-  <!--- Bootstrap Library CSS JS CDN  here --->
-  <!------------------------------------------>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <!------------------------------------------>
+    <!--- Bootstrap Library CSS JS CDN  here --->
+    <!------------------------------------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
-  <!-------------------------------------------------------->
-  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-  <!-------------------------------------------------------->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
-  <!-------------------------------------------->
-  <!-- Other libraries and styles of your own -->
-  <!-------------------------------------------->
-  <link href="/css/main.css" rel="stylesheet" type="text/css" />
-  <link href="/css/common.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-------------------------------------------->
+    <!-- Other libraries and styles of your own -->
+    <!-------------------------------------------->
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-  <!-- navbar here -->
-  <nav id="afterlogin"></nav>
-  <!-- Your HTML Layout go here -->
+    <!-- navbar here -->
+    <nav id="afterlogin"></nav>
+    <!-- Your HTML Layout go here -->
 
-  <main id="container">
-    <section id="user-welcome">
-      <div id="profile-image">
-        <img src="/img/placeholder-profile.png" alt="profile image" />
-      </div>
-      <h2 class="profile-name">Welcome, <span id="username"></span></h2>
-    </section>
+    <main id="container">
+        <section id="user-welcome">
+            <div id="profile-image">
+                <img src="/img/placeholder-profile.png" alt="profile image" />
+            </div>
+            <h2 class="profile-name">Welcome, <span id="username"></span></h2>
+        </section>
 
-    <div id="stats-go-here">Insert stats here later</div>
-    <br />
-    <div class="recent-app-text">
-      <h2>Your Most Recent Applications</h2>
-      <p>Track your progress here!</p>
-    </div>
-    <section id="recent-applications">
-      <div class="accordion" id="application-accordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" id="application-1" type="button" data-bs-toggle="collapse"
-              data-bs-target="#application-info-1" aria-expanded="true" aria-controls="application-info-1">
-            </button>
-          </h2>
-          <div id="application-info-1" class="accordion-collapse collapse show" aria-labelledby="headingOne">
-            <div class="accordion-body">
-              <div class="col-md-12">
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Company</h6>
-                      </div>
-                      <div class="col-sm-8 text-secondary">
-                        <span class="company-name" id="company-name-1"></span>
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="m-0">Position</h6>
-                      </div>
-                      <div class="col-sm-8 text-secondary">
-                        <span class="job-title" id="job-title-1"></span>
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Job Posting</h6>
-                      </div>
-                      <div class="col-sm-8 text-secondary">
-                        <span class="job-posting" id="job-posting-1"><a href="settings.html"></a></span>
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Application Status</h6>
-                      </div>
-                      <div class="col-sm-8 text-secondary">
-                        <span class="status" id="status-1"></span>
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Contact Email</h6>
-                      </div>
-                      <div class="col-sm-8 text-secondary">
-                        <span class="contact-email" id="contact-email-1"></span>
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Contact Number</h6>
-                      </div>
-                      <div class="col-sm-8 text-secondary">
-                        <span class="contact-number" id="contact-number-1"></span>
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Application Date</h6>
-                      </div>
-                      <div class="col-sm-8 text-secondary">
-                        <span class="application-date" id="application-date-1"></span>
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Last Updated</h6>
-                      </div>
-                      <div class="col-sm-8 text-secondary">
-                        <span class="last-update-time" id="last-update-time-1"></span>
-                      </div>
-                    </div>
-                    <hr />
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <h6 class="mb-0">Note</h6>
-                      </div>
-                      <div class="col-sm-8 text-secondary">
-                        <span class="note" id="note-1"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" id="application-2" type="button" data-bs-toggle="collapse"
-                data-bs-target="#application-info-2" aria-expanded="false" aria-controls="application-info-2">
-                Application #2
-              </button>
-            </h2>
-            <div id="application-info-2" class="accordion-collapse collapse" aria-labelledby="headingTwo">
-              <div class="accordion-body">
-                <div class="col-md-12">
-                  <div class="card mb-3">
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Company</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="company-name" id="company-name-2">ABC Inc.</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="m-0">Position</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="job-title" id="job-title-2">Software Developer</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Job Posting</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="job-posting" id="job-posting-2"><a href="#">Job posting</a></span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Application Status</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="status" id="status-2">Applied</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Contact Email</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="contact-email" id="contact-email-2">employer@abcinc.com</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Contact Number</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="contact-number" id="contact-number-2">604-123-4567</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Application Date</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="application-date" id="application-date-2">03/02/2023</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Last Updated</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="last-update-time" id="last-update-time-2">03/04/2023</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Note</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="note" id="note-2">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Corporis rem architecto, eveniet
-                            odit fugit officiis distinctio! Ipsa veniam alias
-                            quas a fugiat. Placeat soluta voluptatum animi
-                            doloribus harum culpa obcaecati.</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" id="application-3" type="button" data-bs-toggle="collapse"
-                data-bs-target="#application-info-3" aria-expanded="false" aria-controls="application-info-3">
-                Application #3
-              </button>
-            </h2>
-            <div id="application-info-3" class="accordion-collapse collapse" aria-labelledby="headingThree">
-              <div class="accordion-body">
-                <div class="col-md-12">
-                  <div class="card mb-3">
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Company</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="company-name" id="company-name-3">ABC Inc.</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="m-0">Position</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="job-title" id="job-title-3">Software Developer</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Job Posting</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="job-posting" id="job-posting-3"><a href="#">Job posting</a></span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Application Status</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="status" id="status-3">Applied</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Contact Email</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="contact-email" id="contact-email-3">employer@abcinc.com</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Contact Number</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="contact-number" id="contact-number-3">604-123-4567</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Application Date</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="application-date" id="application-date-3">03/02/2023</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Last Updated</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="last-update-time" id="last-update-time-3">03/04/2023</span>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <h6 class="mb-0">Note</h6>
-                        </div>
-                        <div class="col-sm-8 text-secondary">
-                          <span class="note" id="note-3">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Corporis rem architecto, eveniet
-                            odit fugit officiis distinctio! Ipsa veniam alias
-                            quas a fugiat. Placeat soluta voluptatum animi
-                            doloribus harum culpa obcaecati.</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id="todo-list">
+            <h2>Tasks to be done!</h2>
+            <input type="text" id="new-tasks" placeholder="Things to add...">
+            <span onclick="newTask()" class="add-button">Add</span>
         </div>
-      </div>
-    </section>
-  </main>
+        <ul id="my-tasks">
+        </ul>
+        <br />
+        <div class="recent-app-text">
+            <h2>Your Most Recent Applications</h2>
+            <p>Track your progress here!</p>
+        </div>
+        <section id="recent-applications">
+            <div class="accordion" id="application-accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" id="application-1" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#application-info-1" aria-expanded="true"
+                            aria-controls="application-info-1">
+                        </button>
+                    </h2>
+                    <div id="application-info-1" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                        <div class="accordion-body">
+                            <div class="col-md-12">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Company</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="company-name" id="company-name-1"></span>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="m-0">Position</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="job-title" id="job-title-1"></span>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Job Posting</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="job-posting" id="job-posting-1"><a
+                                                        href="settings.html"></a></span>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Application Status</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="status" id="status-1"></span>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Contact Email</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="contact-email" id="contact-email-1"></span>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Contact Number</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="contact-number" id="contact-number-1"></span>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Application Date</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="application-date" id="application-date-1"></span>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Last Updated</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="last-update-time" id="last-update-time-1"></span>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h6 class="mb-0">Note</h6>
+                                            </div>
+                                            <div class="col-sm-8 text-secondary">
+                                                <span class="note" id="note-1"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" id="application-2" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#application-info-2" aria-expanded="false"
+                                aria-controls="application-info-2">
+                                Application #2
+                            </button>
+                        </h2>
+                        <div id="application-info-2" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                            <div class="accordion-body">
+                                <div class="col-md-12">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Company</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="company-name" id="company-name-2">ABC Inc.</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="m-0">Position</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="job-title" id="job-title-2">Software Developer</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Job Posting</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="job-posting" id="job-posting-2"><a href="#">Job
+                                                            posting</a></span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Application Status</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="status" id="status-2">Applied</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Contact Email</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="contact-email"
+                                                        id="contact-email-2">employer@abcinc.com</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Contact Number</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="contact-number"
+                                                        id="contact-number-2">604-123-4567</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Application Date</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="application-date"
+                                                        id="application-date-2">03/02/2023</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Last Updated</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="last-update-time"
+                                                        id="last-update-time-2">03/04/2023</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Note</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="note" id="note-2">Lorem ipsum dolor sit amet
+                                                        consectetur
+                                                        adipisicing elit. Corporis rem architecto, eveniet
+                                                        odit fugit officiis distinctio! Ipsa veniam alias
+                                                        quas a fugiat. Placeat soluta voluptatum animi
+                                                        doloribus harum culpa obcaecati.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" id="application-3" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#application-info-3" aria-expanded="false"
+                                aria-controls="application-info-3">
+                                Application #3
+                            </button>
+                        </h2>
+                        <div id="application-info-3" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                            <div class="accordion-body">
+                                <div class="col-md-12">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Company</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="company-name" id="company-name-3">ABC Inc.</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="m-0">Position</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="job-title" id="job-title-3">Software Developer</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Job Posting</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="job-posting" id="job-posting-3"><a href="#">Job
+                                                            posting</a></span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Application Status</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="status" id="status-3">Applied</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Contact Email</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="contact-email"
+                                                        id="contact-email-3">employer@abcinc.com</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Contact Number</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="contact-number"
+                                                        id="contact-number-3">604-123-4567</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Application Date</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="application-date"
+                                                        id="application-date-3">03/02/2023</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Last Updated</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="last-update-time"
+                                                        id="last-update-time-3">03/04/2023</span>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <h6 class="mb-0">Note</h6>
+                                                </div>
+                                                <div class="col-sm-8 text-secondary">
+                                                    <span class="note" id="note-3">Lorem ipsum dolor sit amet
+                                                        consectetur
+                                                        adipisicing elit. Corporis rem architecto, eveniet
+                                                        odit fugit officiis distinctio! Ipsa veniam alias
+                                                        quas a fugiat. Placeat soluta voluptatum animi
+                                                        doloribus harum culpa obcaecati.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- content of body here -->
-  <!-- footer here-->
-  <nav id="footerPlaceholder"></nav>
+    <!-- content of body here -->
+    <!-- footer here-->
+    <nav id="footerPlaceholder"></nav>
 
-  <!---------------------------------------------->
-  <!------- JavaScript functions go here   ------->
-  <!---------------------------------------------->
-  <script src="/js/firebaseAPI.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="/js/skeleton.js"></script>
+    <!---------------------------------------------->
+    <!------- JavaScript functions go here   ------->
+    <!---------------------------------------------->
+    <script src="/js/firebaseAPI.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/skeleton.js"></script>
 </body>
 
 </html>
