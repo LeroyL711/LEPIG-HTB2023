@@ -1,12 +1,12 @@
-
 * {
   font-family: monospace;
   font-size: 14pt;
 }
 
-.navbar {
+#afterlogin, #beforelogin{
   background-color: #9dc08b !important;
 }
+
 
 .navbar-brand {
   font-size: 36px;
@@ -14,10 +14,10 @@
   color: white !important;
 }
 
-.material-symbols-outlined{
+.material-symbols-outlined {
   display: block !important;
 }
 
-.nav-link{
+.nav-link {
   text-align: center;
 }
