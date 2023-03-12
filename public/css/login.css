@@ -21,13 +21,21 @@ body {
 	font-size: medium;
 }
 
-.firebaseui-title, .mdl-textfield__label, .firebaseui-link, .firebaseui-tos {
+.firebaseui-title, .mdl-textfield__label, .mdl-textfield__input, .firebaseui-id-submit, .firebaseui-link, .firebaseui-tos {
 	font-family: monospace, sans-serif;
 }
 
 .firebaseui-link {
-	font-size: 13px !important;
+	font-size: 11px !important;
 }
+
+.mdl-textfield__label {
+	font-size: 15px !important;
+	font-family: monospace, sans-serif !important;
+}
+
+
+
 
 /* .mdl-textfield__input.firebaseui-input.firebaseui-id-email::before {
 	border-color: red !important;
