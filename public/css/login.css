@@ -6,6 +6,42 @@ body {
 	font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
+.firebaseui-id-submit {
+	background-color: #9DC08B !important;
+}
+
+/* .mdl-textfield__input.firebaseui-input.firebaseui-id-email::before {
+	border-color: red !important;
+} */
+
+/* .mdl-textfield__input.firebaseui-input.firebaseui-id-password::before {
+	border-color: red !important;
+} */
+
+/* .mdl-textfield__input.firebaseui-input.firebaseui-id-password::before {
+	border-color: red !important;
+} */
+
+/* .firebaseui-input {
+	border-bottom: 2px solid red !important;
+} */
+
+/* .firebaseui-textfield.mdl-textfield .mdl-textfield__input:active {
+	border-bottom-color: red !important;
+} */
+
+/* .firebaseui-id-secondary-link {
+	background-color: #40513B !important;
+} */
+
+/* .firebaseui-id-email .mdl-textfield__label:after {
+	background-color: red !important;
+} */
+
+/* .firebaseui-idp-list {
+	border-top: 2px solid red !important;
+} */
+
 .container {
 	display: flex;
 	justify-content: center;
