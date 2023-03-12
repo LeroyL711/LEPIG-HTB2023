@@ -7,7 +7,15 @@
   background-color: #9dc08b !important;
 }
 
+.profile-nav{
+ text-align: center;
+ text-decoration: none;
+ color: #343a40;
+}
 
+.profile-nav:hover{
+  color:black;
+ }
 .navbar-brand {
   font-size: 36px;
   margin-left: 16px;
