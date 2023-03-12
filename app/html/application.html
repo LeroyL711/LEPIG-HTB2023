@@ -31,9 +31,10 @@
   <!-- Other libraries and styles of your own -->
   <!-------------------------------------------->
   <link href="/css/application.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="/css/common.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/common.css" type="text/css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -46,7 +47,7 @@
         <h3>Your Job Application Info</h3>
 
         <label for="company">🏢 Company:</label>
-        <input type="text" id="job-title" name="company" /><br />
+        <input type="text" id="company" name="company" /><br />
 
         <label for="job-title">💼 Job Position:</label>
         <input type="text" id="job-title" name="job-title" /><br />
@@ -57,12 +58,12 @@
         <label for="status">👣 Status:</label>
         <br />
         <select id="status" name="status">
-          <option value="prospect">Prospect</option>
-          <option value="applied">Applied</option>
-          <option value="in_interviews">In Interviews</option>
-          <option value="negotiating">Negotiating Offer</option>
-          <option value="follow_up">Requires Follow-Up</option>
-          <option value="rejected">Rejected</option>
+          <option value="Preparing">Preparing</option>
+          <option value="Submitted">Submitted</option>
+          <option value="Shortlisted">Shortlisted</option>
+          <option value="Negotiating">Negotiating</option>
+          <option value="Offered">Offered</option>
+          <option value="Rejected">Declined</option>
         </select><br />
 
         <label for="job-location">📍 Location:</label>
@@ -83,7 +84,7 @@
         <textarea id="note" name="note"></textarea><br />
 
         <div class="btn-container">
-          <button type="submit">Update</button>
+          <button type="submit" id="update-btn">Save Application</button>
         </div>
       </div>
     </div>
@@ -97,6 +98,8 @@
   <!---------------------------------------------->
   <script src="/js/firebaseAPI.js"></script>
   <script src="/js/skeleton.js"></script>
+  <script src="/js/application.js"></script>
+
 </body>
 
 </html>

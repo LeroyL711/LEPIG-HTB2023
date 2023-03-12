@@ -46,6 +46,10 @@ app.get('/list.html', (req, res) => {
   res.sendFile(__dirname + '/app/html/list.html');
 });
 
+app.get('/settings.html', (req, res) => {
+  res.sendFile(__dirname + '/app/html/settings.html');
+});
+
 app.get('/nav_before_login.html', (req, res) => {
   res.sendFile(__dirname + '/text/nav_before_login.html');
 });
