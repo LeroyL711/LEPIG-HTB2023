@@ -12,3 +12,18 @@
   top: 68%;
 }
 
+label {
+  position: relative;
+  top: -60px;
+  left: 105px;
+  background-color:white;
+  color: black;
+  padding: 0.25rem;
+  border-radius: 1.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: center;
+
+}
+
