@@ -12,6 +12,8 @@ function createApplication() {
   let Updated = document.getElementById("date-updated").value;;
   let Note = document.getElementById("note").value;;
   let Description = document.getElementById("job-description").value;;
+  let Email = document.getElementById("contact-email").value;;
+  let Number = document.getElementById("contact-number").value;;
 
 
   console.log(Company, Title, Link, Status, Location, Applied, Updated, Note);
@@ -33,7 +35,9 @@ function createApplication() {
             applied_date: Applied,
             updated_date: Updated,
             note: Note,
-            job_description: Description
+            job_description: Description,
+            contact_email: Email,
+            contact_number: Number
             // }).then(() => {
             //   window.location.href = "/list.html";
           })
