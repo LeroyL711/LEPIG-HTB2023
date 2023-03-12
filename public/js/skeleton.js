@@ -21,7 +21,7 @@ function loadSkeleton() {
             $('#beforelogin').load('./nav_before_login.html', function () {
                 console.log("Before login navbar loaded successfully.");
             });
-            $('#beforelogin').load('./footer.html', function (response, status, xhr) {
+            $('#footerPlaceholder2').load('./footer.html', function (response, status, xhr) {
                 console.log('Loaded footer:', status);
                 if (status == 'error') {
                     console.log('Error loading footer:', xhr.status, xhr.statusText);
