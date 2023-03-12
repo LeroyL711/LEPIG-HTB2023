@@ -10,5 +10,8 @@
 
 .material-symbols-outlined{
   display: block !important;
+}
+
+.nav-link{
   text-align: center;
 }
