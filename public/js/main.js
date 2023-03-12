@@ -85,8 +85,7 @@ var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = () => {
-    var div = this.parentElement;
-    div.style.display = "none";
+    this.parentElement.style.display = "none";
   }
 }
 
