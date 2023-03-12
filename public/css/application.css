@@ -37,7 +37,7 @@
 .job-application input[type="email"],
 .job-application input[type="tel"],
 .job-application textarea,
-#status {
+#status, #status-editview {
   width: 100%;
   padding: 10px;
   margin-bottom: 30px;
