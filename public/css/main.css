@@ -59,7 +59,7 @@
 #my-tasks li {
   cursor: pointer;
   padding: 12px 8px 12px 40px;
-  background: rgb(167, 118, 118);
+  background: #EDF1D6;
   font-size: 18px;
   transition: 0.2s;
   list-style: none;
@@ -70,20 +70,20 @@
 }
 
 #my-tasks li:nth-child(odd) {
-  background: #609966;
-}
-
-#my-tasks li:hover {
   background: #9DC08B;
 }
 
-#my-tasks li .checked {
+#my-tasks li:hover {
+  background: #EDF1D6;
+}
+
+#my-tasks li.checked {
   background: #EDF1D6;
   color: black;
   text-decoration: line-through;
 }
 
-#my-tasks li .checked::before {
+#my-tasks li.checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -97,13 +97,14 @@
 }
 
 .close {
-
-
-  padding: 12px 16px 12px 16px;
+  position: absolute;
+  right: 21%;
+  padding: 0px 15px;
+  font-size: 30pt;
+  line-height: 60%;
 }
 
 .close:hover {
-  background-color: #f44336;
   color: white;
 }
 
@@ -148,7 +149,7 @@ input {
 }
 
 #todo-list {
-  background-color: #EDF1D6;
+  background-color: #609966;
 }
 
 .check {
